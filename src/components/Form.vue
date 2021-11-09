@@ -382,12 +382,12 @@ export default {
       return this.formData.bdate && new Date(this.formData.bdate) > new Date();
     },
     passportSerialInvalid() {
-      return this.formData.passportSerial.length > MAX_PASSPORT_SERIAL_LENGTH;
+      return this.formData.passportSerial.length != MAX_PASSPORT_SERIAL_LENGTH;
     },
     passportNumberInvalid() {
       return (
         this.isRUcitizenship &&
-        this.formData.passportNumber.length > MAX_RU_PASSPORT_NUMBER_LENGTH
+        this.formData.passportNumber.length != MAX_RU_PASSPORT_NUMBER_LENGTH
       );
     },
     isFormValid() {
